@@ -12,13 +12,13 @@ public class TopNGroupsDisplayRoute extends RouteBuilder {
     /*
      Aggregate query:
         db.getCollection('rsvps').aggregate([
-            { $match : { response : "yes"} },
+            { $match : { response : "yes"} }, // Not required, as we filter out declined invites in MeetupStreamRouter
             { $group : { _id : "$group.group_name", count : { $sum : 1 } } },
             { $sort : {count: -1} },
             { $limit : 10 }
         ])
      */
-    String aggregateQuery = "[{ $match : { response : \"yes\" } }, { $group : { _id : \"$group.group_name\", count : {$sum : 1}} }, { $sort : {count: -1} }, { $limit : 10 }]";
+    String aggregateQuery = "[ { $group : { _id : \"$group.group_name\", count : {$sum : 1}} }, { $sort : {count: -1} }, { $limit : 10 } ]";
     
     @Override
     public void configure() throws Exception {
