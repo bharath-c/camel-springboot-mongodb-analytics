@@ -1,4 +1,4 @@
-package org.zetrahytes.app.router;
+package org.zetrahytes.app.route;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;

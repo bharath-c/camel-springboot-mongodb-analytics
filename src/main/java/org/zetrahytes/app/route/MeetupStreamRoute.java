@@ -1,10 +1,10 @@
-package org.zetrahytes.app.router;
+package org.zetrahytes.app.route;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MeetupStreamRouter extends RouteBuilder {
+public class MeetupStreamRoute extends RouteBuilder {
     
     // an example for Message Filter pattern (See http://camel.apache.org/message-filter.html)
     @Override
