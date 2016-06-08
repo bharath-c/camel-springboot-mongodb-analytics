@@ -11,10 +11,8 @@ public class MongoDBResultProcessor implements Processor {
 
     @Override
     public void process(Exchange exchange) throws Exception {
-        BasicDBList payload = exchange.getIn().getBody(BasicDBList.class);
-        for (Object obj : payload) {
-            System.out.println(obj.toString());
-        }
+        BasicDBList resultList = exchange.getIn().getBody(BasicDBList.class);
+        resultList.forEach(System.out::println); // Java 8
         System.out.println("=====================");
     }
 
