@@ -22,6 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 		<camel.version>2.17.1</camel.version>
+        <elasticsearch.version>2.2.0</elasticsearch.version>
 	</properties>
 
 	<dependencies>
@@ -54,6 +55,16 @@
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-jsonpath</artifactId>
             <version>${camel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-elasticsearch</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>${elasticsearch.version}</version><!--$NO-MVN-MAN-VER$-->
         </dependency>
 		<dependency>
             <groupId>org.springframework.boot</groupId>
